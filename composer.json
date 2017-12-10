@@ -1,0 +1,5 @@
+{
+    "require": {
+        "php-framework/php-framework": "dev-master"
+    }
+}
