@@ -1,5 +1,23 @@
 {
-    "require": {
-        "php-framework/php-framework": "dev-master"
+  "name": "php-session/php-session",
+  "type": "library",
+  "description": "php session",
+  "keywords": [
+    "session",
+    "php-session"
+  ],
+  "authors": [
+    {
+      "name": "zhangfengjin",
+      "email": "793665131@qq.com"
     }
+  ],
+  "require": {
+    "php-framework/php-framework": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "XYLibrary\\": "src/"
+    }
+  }
 }
