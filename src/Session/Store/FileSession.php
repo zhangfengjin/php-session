@@ -53,6 +53,9 @@ class FileSession implements \SessionHandlerInterface
      */
     public function write($session_id, $session_data)
     {
+        if (!$this->fileSystem->exists($this->path)) {
+            @mkdir($this->path, 0777, true);
+        }
         $this->fileSystem->put($this->path . "/" . $session_id, $session_data, true);
         return true;
     }
