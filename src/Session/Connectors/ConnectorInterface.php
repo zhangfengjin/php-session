@@ -9,7 +9,13 @@
 namespace XYLibrary\Session\Connectors;
 
 
-class ConnectorInterface
+interface ConnectorInterface
 {
-
+    /**
+     * 连接缓存实现接口
+     * 返回具体的缓存实现对象实例FileStore\CacheStore等
+     * @param $config
+     * @return mixed
+     */
+    function connections($config);
 }

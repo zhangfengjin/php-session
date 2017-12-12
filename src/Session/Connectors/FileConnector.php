@@ -9,7 +9,19 @@
 namespace XYLibrary\Session\Connectors;
 
 
-class FileConnector
-{
+use XYLibrary\Session\Store\FileSession;
 
+class FileConnector implements ConnectorInterface
+{
+    protected $app;
+
+    function __construct($app)
+    {
+        $this->app = $app;
+    }
+
+    function connections($config)
+    {
+        return new FileSession($this->app["files"], $config["files"], $config["lifetime"]);
+    }
 }

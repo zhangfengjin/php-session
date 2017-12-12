@@ -9,7 +9,12 @@
 namespace XYLibrary\Session\Facade;
 
 
-class Session
-{
+use XYLibrary\Facade\Facade;
 
+class Session extends Facade
+{
+    protected static function getFacadeAccessor()
+    {
+        return "session";
+    }
 }
